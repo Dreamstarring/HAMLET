@@ -240,17 +240,15 @@
       </div>
     </div>
         <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
+          <div class="column is-full">
               <!-- include a figure -->
               <figure class="image">
                   <img src="static/images/framework.png" alt="Teaser" style="max-width: 100%;">
               </figure>
               <p>
-                Overview of the components of Hamlet.
-                The green boxes represent the processing steps, including the detection and prediction of the ball trajectory. 
-                The blue boxes represent the model-based strategy for controlling the chassis. 
-                The dark orange box represents the rigid transformation of ball trajectory coordinates. 
-                The yellow box represents the learning-based policy for controlling the robotic arm.
+               We first detect and predict the incoming shuttlecock’s trajectory, then drive the chassis with a model‑based PD controller to a reachable base position. 
+                The predicted trajectory is rigidly transformed—translated by that base position and rotated according to the chassis orientation—into the local arm coordinate frame. 
+                Finally, a learning‑based policy uses the transformed trajectory to generate precise end‑effector velocity commands for accurate hitting.
               </p>
           </div>
       </div>
